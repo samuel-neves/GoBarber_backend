@@ -2,6 +2,7 @@
 .idea/
 node_modules/
 build/
+temp/
 
-tpm/*
-!tpm/.gitkeep
+tmp/*
+!tmp/.gitkeep

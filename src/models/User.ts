@@ -17,8 +17,11 @@ class User {
   @Column()
   email: string;
 
-  @Column('time with time zone')
+  @Column()
   password: string;
+
+  @Column()
+  avatar: string;
 
   @CreateDateColumn()
   created_at: Date;
