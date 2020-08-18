@@ -44,7 +44,10 @@ class SendForgotPasswordEmailService {
     if (isAfter(Date.now(), compareDate)) {
       throw new AppError('Token expired');
     }
+
     user.password = await this.hashProvider.generateHash(password);
+
+    await this.usersRepository.save(user);
   }
 }
 
