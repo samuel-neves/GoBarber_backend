@@ -3,6 +3,6 @@ interface IParseVariables {
 }
 
 export default interface IParseTemplateProvider {
-  template: string;
+  file: string;
   variables: IParseVariables;
 }
