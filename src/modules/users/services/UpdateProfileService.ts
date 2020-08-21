@@ -44,10 +44,6 @@ class UpdateProfileService {
       throw new AppError('Email already in use');
     }
 
-    if (password && !oldPassword) {
-      throw new AppError('The old password should be informed');
-    }
-
     if (password) {
       if (!oldPassword) {
         throw new AppError('The old password should be informed');
