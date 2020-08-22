@@ -52,9 +52,11 @@ class ListProviderDayAvailabilityService {
 
       const compareDate = new Date(year, month - 1, day, hour);
 
+      const available = !appointmentInHour && isAfter(compareDate, currentDate);
+
       return {
         hour,
-        available: !appointmentInHour && isAfter(compareDate, currentDate),
+        available,
       };
     });
 
